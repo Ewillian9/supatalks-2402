@@ -1,9 +1,10 @@
-<nav>
+<nav class="bg-dark text-center text-white p-3">
     {% if app.request.get('_route') == 'app_home' %}
         <span>{{ ux_icon('mdi:home', { 'class': 'h-1 w-1' }) }}HOME</span>
     {% else %}
         <a href="{{ path('app_home') }}">{{ ux_icon('mdi:home', { 'class': 'h-1 w-1' }) }}HOME</a>
     {% endif %}
+
     {% if app.request.get('_route') == 'app_post_index' %}
         <span>{{ ux_icon('mdi:blog', { 'class': 'h-1 w-1' }) }}Posts</span>
     {% else %}
@@ -11,12 +12,13 @@
     {% endif %}
     
     {% if app.user %}
+	    <a href={{ path('admin') }} class="btn btn-light btn-sm rounded-pill text-dark">dashboard</a>
         {% if app.request.get('_route') == 'app_post_new' %}
             <span>{{ ux_icon('mdi:add', { 'class': 'h-1 w-1' }) }}Creating</span>
         {% else %}
             <a href="{{ path('app_post_new') }}">{{ ux_icon('mdi:add', { 'class': 'h-1 w-1' }) }}Create</a>
         {% endif %}
-        <a href="{{ path('app_logout') }}">Logout</a>
+        <a href="{{ path('app_logout') }}">Logout{{ ux_icon('material-symbols:logout', { 'class': 'h-1 w-1' }) }}</a>
     {% else %}
         {% if app.request.get('_route') == 'app_login' %}
             <span>Login</span>
