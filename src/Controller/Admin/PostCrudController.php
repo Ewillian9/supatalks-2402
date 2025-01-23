@@ -44,14 +44,14 @@ class PostCrudController extends AbstractCrudController
         return [
             FormField::addPanel('Post Information'),
             TextField::new('title')
-                ->setLabel('Title')
+                ->setLabel('🗿Title')
                 ->setHelp('Set the title of the post'),
             TextField::new('content')
                 ->setLabel('Content')
                 ->setHelp('Set the content of the post')
                     ->hideOnIndex(),
             BooleanField::new('isPublished')
-                ->setLabel('Published?')
+                ->setLabel('ℹ️Published?')
                 ->setHelp('Is the post published?'),
             ImageField::new('image')
                 ->setLabel('📷 Image')
