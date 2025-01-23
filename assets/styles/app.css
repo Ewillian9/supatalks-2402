@@ -45,3 +45,8 @@ div.pagination {
     width: fit-content;
     gap: .75rem;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
