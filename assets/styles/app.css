@@ -1,0 +1,47 @@
+:root {
+    --primary: #151515;
+    --secondary: #f5f5f5;
+    --tertiary: #ece3d3;
+    --bs-primary: var(--tertiary) !important;
+    --bs-primary-rgb: var(--tertiary) !important;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 500 !important;
+}
+
+.btn, .text-primary {
+    color: var(--tertiary) !important;
+    border: 0 !important;
+}
+.btn-primary, .bg-primary {
+    background-color: var(--tertiary) !important;
+    color: var(--primary) !important;
+}
+
+.h-1 { height: 1rem; }
+.h-2 { height: 1.5rem; }
+.h-3 { height: 1.95rem; }
+.h-4 { height: 2.25rem; }
+.h-5 { height: 2.85rem; }
+.h-6 { height: 3rem; }
+
+.w-1 { width: 1rem; }
+.w-2 { width: 1.5rem; }
+.w-3 { width: 1.95rem; }
+.w-4 { width: 2.25rem; }
+.w-5 { width: 2.85rem; }
+.w-6 { width: 3rem; }
+
+div.pagination {
+    margin: auto;
+    width: fit-content;
+    gap: .75rem;
+}

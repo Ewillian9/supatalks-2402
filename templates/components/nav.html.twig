@@ -1,0 +1,27 @@
+<nav>
+    {% if app.request.get('_route') == 'app_home' %}
+        <span>{{ ux_icon('mdi:home', { 'class': 'h-1 w-1' }) }}HOME</span>
+    {% else %}
+        <a href="{{ path('app_home') }}">{{ ux_icon('mdi:home', { 'class': 'h-1 w-1' }) }}HOME</a>
+    {% endif %}
+    {% if app.request.get('_route') == 'app_post_index' %}
+        <span>{{ ux_icon('mdi:blog', { 'class': 'h-1 w-1' }) }}Posts</span>
+    {% else %}
+        <a href="{{ path('app_post_index') }}">{{ ux_icon('mdi:blog', { 'class': 'h-1 w-1' }) }}Posts</a>
+    {% endif %}
+    
+    {% if app.user %}
+        {% if app.request.get('_route') == 'app_post_new' %}
+            <span>{{ ux_icon('mdi:add', { 'class': 'h-1 w-1' }) }}Creating</span>
+        {% else %}
+            <a href="{{ path('app_post_new') }}">{{ ux_icon('mdi:add', { 'class': 'h-1 w-1' }) }}Create</a>
+        {% endif %}
+        <a href="{{ path('app_logout') }}">Logout</a>
+    {% else %}
+        {% if app.request.get('_route') == 'app_login' %}
+            <span>Login</span>
+        {% else %}
+            <a href="{{ path('app_login') }}">Login</a>
+        {% endif %}
+    {% endif %}
+</nav>
