@@ -57,8 +57,8 @@ class PostCrudController extends AbstractCrudController
                 ->setLabel('📷 Image')
                 ->setHelp('Choose an image for the post')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
-                ->setUploadDir('public/uploads/speakers')
-                ->setBasePath('uploads/speakers'),
+                ->setUploadDir('public/uploads/posts')
+                ->setBasePath('uploads/posts'),
         ];
     }
 }
