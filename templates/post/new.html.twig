@@ -7,5 +7,5 @@
 
     {{ include('post/_form.html.twig') }}
 
-    <a href={{ path('app_post_index') }}>{{ ux_icon('mdi:arrow-back', { 'class': 'h-1 w-1' }) }}Back to posts</a>
+    <a href={{ path('app_post_index') }} class="btn btn-primary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:arrow-back', { 'class': 'h-1 w-1' }) }} Back to posts</a>
 {% endblock %}

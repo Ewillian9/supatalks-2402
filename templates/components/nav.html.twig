@@ -1,29 +1,29 @@
 <nav class="bg-dark text-center text-white p-3">
     {% if app.request.get('_route') == 'app_home' %}
-        <span>{{ ux_icon('mdi:home', { 'class': 'h-1 w-1' }) }}HOME</span>
+        <span class="btn btn-primary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:home', { 'class': 'h-1 w-1' }) }} HOME</span>
     {% else %}
-        <a href="{{ path('app_home') }}">{{ ux_icon('mdi:home', { 'class': 'h-1 w-1' }) }}HOME</a>
+        <a href={{ path('app_home') }} class="btn btn-secondary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:home', { 'class': 'h-1 w-1' }) }} HOME</a>
     {% endif %}
 
     {% if app.request.get('_route') == 'app_post_index' %}
-        <span>{{ ux_icon('mdi:blog', { 'class': 'h-1 w-1' }) }}Posts</span>
+        <span class="btn btn-primary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:blog', { 'class': 'h-1 w-1' }) }} Posts</span>
     {% else %}
-        <a href="{{ path('app_post_index') }}">{{ ux_icon('mdi:blog', { 'class': 'h-1 w-1' }) }}Posts</a>
+        <a href={{ path('app_post_index') }} class="btn btn-secondary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:blog', { 'class': 'h-1 w-1' }) }} Posts</a>
     {% endif %}
     
     {% if app.user %}
-	    <a href={{ path('admin') }} class="btn btn-light btn-sm rounded-pill text-dark">dashboard</a>
         {% if app.request.get('_route') == 'app_post_new' %}
-            <span>{{ ux_icon('mdi:add', { 'class': 'h-1 w-1' }) }}Creating</span>
+            <span class="btn btn-primary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:add', { 'class': 'h-1 w-1' }) }} Creating</span>
         {% else %}
-            <a href="{{ path('app_post_new') }}">{{ ux_icon('mdi:add', { 'class': 'h-1 w-1' }) }}Create</a>
+            <a href={{ path('app_post_new') }} class="btn btn-secondary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:add', { 'class': 'h-1 w-1' }) }} Create</a>
         {% endif %}
-        <a href="{{ path('app_logout') }}">Logout{{ ux_icon('material-symbols:logout', { 'class': 'h-1 w-1' }) }}</a>
+        <a href={{ path('admin') }} class="btn btn-secondary btn-sm rounded-pill text-dark">{{ ux_icon('material-symbols:dashboard-rounded', { 'class': 'h-1 w-1' }) }} Dashboard</a>
+        <a href={{ path('app_logout') }} class="btn btn-secondary btn-sm rounded-pill text-dark">Logout {{ ux_icon('material-symbols:logout', { 'class': 'h-1 w-1' }) }}</a>
     {% else %}
         {% if app.request.get('_route') == 'app_login' %}
-            <span>Login</span>
+            <span class="btn btn-primary btn-sm rounded-pill text-dark">{{ ux_icon('material-symbols:login', { 'class': 'h-1 w-1' }) }} Login</span>
         {% else %}
-            <a href="{{ path('app_login') }}">Login</a>
+            <a href={{ path('app_login') }} class="btn btn-secondary btn-sm rounded-pill text-dark">{{ ux_icon('material-symbols:login', { 'class': 'h-1 w-1' }) }} Login</a>
         {% endif %}
     {% endif %}
 </nav>

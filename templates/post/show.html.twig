@@ -24,9 +24,9 @@
         </tbody>
     </table>
 
-    <a href={{ path('app_post_index') }}>{{ ux_icon('mdi:arrow-back', { 'class': 'h-1 w-1' }) }}Back to posts</a>
+    <a href={{ path('app_post_index') }} class="btn btn-primary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:arrow-back', { 'class': 'h-1 w-1' }) }} Back to posts</a>
     {% if app.user == post.user %} 
-        <a href={{ path('app_post_edit', {'ref': post.ref}) }}>{{ ux_icon('mdi:pencil', { 'class': 'h-1 w-1' }) }}Edit</a>
+        <a href={{ path('app_post_edit', {'ref': post.ref}) }} class="btn btn-primary btn-sm rounded-pill text-dark">{{ ux_icon('mdi:pencil', { 'class': 'h-1 w-1' }) }} Edit</a>
         {{ include('post/_delete_form.html.twig') }}
     {% endif %}
 {% endblock %}

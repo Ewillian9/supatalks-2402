@@ -1,4 +1,4 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ ux_icon('mdi:check', { 'class': 'h-1 w-1' }) }}{{ button_label|default('Save') }}</button>
+    <button class="btn btn-success btn-sm rounded-pill text-dark">{{ ux_icon('mdi:check', { 'class': 'h-1 w-1' }) }} {{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
